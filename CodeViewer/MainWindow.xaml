@@ -1,0 +1,25 @@
+﻿<Window x:Class="CodeViewer.MainWindow"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                Title="MainWindow" Height="350" Width="525">
+        <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="auto"/>
+			<ColumnDefinition Width="2*" />
+		</Grid.ColumnDefinitions>
+		<DockPanel Grid.Column="0">
+
+			<telerik:RadTreeView x:Name="tv1" Grid.Row="1" Padding="5" BorderThickness="0"
+						IsEditable="True" SelectionMode="Single"
+						IsSingleExpandPath="True" IsExpandOnSingleClickEnabled="True"/>
+		</DockPanel>
+		<GridSplitter HorizontalAlignment="Center"   
+                      VerticalAlignment="Stretch"   
+                      Grid.Column="1"   
+                      Width="5" Background="Silver">
+		</GridSplitter>
+		<telerik:RadSyntaxEditor Grid.Column="2"  x:Name="txtCode" />
+	</Grid>
+</Window>
